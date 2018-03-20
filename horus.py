@@ -2,6 +2,7 @@ import numpy as np
 import numpy.linalg as nl
 import groundTruthLocation as gtl
 
+max_time = 0
 train_files = []
 for i in range(1, 13):
     train_files.append('horusrssi/-12dBm0.1secRssi' + str(i) + '.txt')
@@ -97,7 +98,7 @@ def train(state_files, num_beacon = 60):
     # Get mu and sigma for each state, noted that here it's sigma instead of sigma square.
 
     num_state = len(state_files)
-    state_map = np.zeros((num_state, num_beacon, 2))  # For beacons not in file, mu = -100, sigma = 1/3. ???
+    state_map = np.zeros((num_state, num_beacon, 2))  # For beacons not in file, mu = -100, sigma = 1/3. 
     state_map[:,:,0] = -100
     state_map[:,:,1] = 1/3
 
@@ -139,6 +140,7 @@ def cluster_test_data(filename, num_beacon = 60, interval = 10):
 
     data = convert_test_data(filename)
     num_rows = data.shape[0]
+    global max_time
     max_time = data[num_rows-1][0]
 
     num_cluster = int(max_time / interval)
@@ -179,10 +181,12 @@ def test(state_map, test_rssi, state_loc):   #Discuss with Subham about one hot 
     norm_probs = np.zeros(len_probs).reshape(state_map.shape[0], 1)
 
     for i in range(len_probs):
-        norm_probs[i] = 1 / (np.sum(np.exp(probs - probs[i])))
+        if np.any(probs - probs[i] > 50):
+            norm_probs[i] = 0
+        else:
+            norm_probs[i] = 1 / (np.sum(np.exp(probs - probs[i])))
 
     print(norm_probs)
-
     res = np.sum(norm_probs * state_loc, axis = 0)
 
     return res
@@ -226,10 +230,10 @@ def main():
         pred_loc[index-1][0] = res[0]
         pred_loc[index-1][1] = res[1]
 
-    maxtime = 257
+    '''global max_time
     trueLoc = np.zeros((25,2))
     for i in range(25):
-        cur = gtl.findActualLocation(startTime=10*(i) , endTime=10*(i+1), stopTime=10, maxTime=maxtime)
-        trueLoc[i][0], trueLoc[i][1] = cur[0], cur[1]
+        cur = gtl.findActualLocation(startTime=10*(i) , endTime=10*(i+1), stopTime=10, maxTime=max_time)
+        trueLoc[i][0], trueLoc[i][1] = cur[0], cur[1]'''
 
 main()

@@ -1,13 +1,14 @@
 import numpy as np
 import numpy.linalg as nl
+import matplotlib.pyplot as plt
 import groundTruthLocation as gtl
 
 max_time = 0
 train_files = []
 for i in range(1, 13):
-    train_files.append('horusrssi/-12dBm0.1secRssi' + str(i) + '.txt')
+    train_files.append('horusrssi/-15dBm0.1secRssi' + str(i) + '.txt')
 
-test_file = 'traceRssi-12dB0.1sec1.txt'
+test_file = 'traceRssi-15dB0.1sec1.txt'
 
 def convert_train_data(file_name):
     # File content should be [b_i, rssi]
@@ -67,7 +68,6 @@ def convert_test_data(file_name):
     return data
 
 
-
 def get_alpha(beacon_dict, num_beacon = 60):
     # Returned alphas should be [alpha_b1, alpha_b2, ..., alpha_bn]
     # ssvs => signal strength values
@@ -98,7 +98,7 @@ def train(state_files, num_beacon = 60):
     # Get mu and sigma for each state, noted that here it's sigma instead of sigma square.
 
     num_state = len(state_files)
-    state_map = np.zeros((num_state, num_beacon, 2))  # For beacons not in file, mu = -100, sigma = 1/3. 
+    state_map = np.zeros((num_state, num_beacon, 2))  # For beacons not in file, mu = -100, sigma = 1/3.
     state_map[:,:,0] = -100
     state_map[:,:,1] = 1/3
 
@@ -159,7 +159,7 @@ def cluster_test_data(filename, num_beacon = 60, interval = 10):
 
     return d
 
-def test(state_map, test_rssi, state_loc):   #Discuss with Subham about one hot condition
+def test(state_map, test_rssi, state_loc, index):   #Discuss with Subham about one hot condition
     # return state index with max liklihood
     # state_map => (state, beacon, (mu, sigma))
     # state_loc => (state, (x, y))
@@ -176,6 +176,7 @@ def test(state_map, test_rssi, state_loc):   #Discuss with Subham about one hot 
 
         probs.append(sum_log)
 
+
     probs = np.asarray(probs).reshape(state_map.shape[0], 1)
     len_probs = len(probs)
     norm_probs = np.zeros(len_probs).reshape(state_map.shape[0], 1)
@@ -186,11 +187,12 @@ def test(state_map, test_rssi, state_loc):   #Discuss with Subham about one hot 
         else:
             norm_probs[i] = 1 / (np.sum(np.exp(probs - probs[i])))
 
-    print(norm_probs)
     res = np.sum(norm_probs * state_loc, axis = 0)
 
     return res
 
+
+#Ignore this function
 def ss_compensator(prev_state, test_file, state_loc, state_map, thred = 2, d = 0.05, N = 6):
     # thred => max distance per second
     # prev_state, pred_state => numpy (x, y) in meter metric
@@ -223,17 +225,32 @@ def main():
 
     d = cluster_test_data(test_file)
 
-    pred_loc = np.zeros((len(d), 2))
+    pred_loc = np.zeros((len(d), 2)) # This is the final prediction
 
     for index in d:
-        res = test(state_map, d[index], state_loc)
+        res = test(state_map, d[index], state_loc, index)
         pred_loc[index-1][0] = res[0]
         pred_loc[index-1][1] = res[1]
 
-    '''global max_time
-    trueLoc = np.zeros((25,2))
-    for i in range(25):
-        cur = gtl.findActualLocation(startTime=10*(i) , endTime=10*(i+1), stopTime=10, maxTime=max_time)
-        trueLoc[i][0], trueLoc[i][1] = cur[0], cur[1]'''
+    global max_time
+    trueLoc = np.zeros((int(max_time / 10), 2))
+    for i in range(int(max_time / 10)):
+        cur = gtl.findActualLocation(startTime=10*(i), endTime=10*(i+1), stopTime=10, maxTime=max_time)
+        trueLoc[i][0], trueLoc[i][1] = cur[0], cur[1]
+
+    #print(np.linalg.norm(pred_loc - trueLoc, axis = 1))
+    #plt.plot(np.arange(int(max_time / 10)), abs(np.linalg.norm(pred_loc - trueLoc, axis = 1)))
+    #plt.show()
+
+    '''print(state_map[0])
+
+    print('================\n')
+
+    print(state_map[1])
+
+    print('================\n')
+
+    print(d[1])'''
+
 
 main()

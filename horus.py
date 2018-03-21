@@ -3,16 +3,6 @@ import numpy.linalg as nl
 import matplotlib.pyplot as plt
 import groundTruthLocation as gtl
 
-freq = -15
-intv = 0.1
-
-max_time = 0
-train_files = []
-for i in range(1, 13):
-    train_files.append('horusrssi/' + str(freq) +'dBm' + str(intv) + 'secRssi' + str(i) + '.txt')
-
-test_file = 'traceRssi' + str(freq) +'dB' + str(intv) + 'sec1.txt'
-
 def convert_train_data(file_name):
     # File content should be [b_i, rssi]
     #                        ..........
@@ -138,13 +128,33 @@ def process_cluster(cluster, num_beacon = 60):
 
     return ret / cnt
 
+def median_process_cluster(cluster, num_beacon = 60):
+    bs = np.empty(num_beacon, dtype=object)
+
+    for i in range(num_beacon):
+        bs[i] = []
+    arg = np.argsort(cluster[:, 1])
+    cluster = cluster[arg]
+
+    for i in range(len(cluster)):
+        bs[int(cluster[i][1]) - 1].append(cluster[i][2])
+
+    res = []
+    for arr in bs:
+        if arr == []:
+            res.append(0)
+        else:
+            res.append(np.median(np.array(arr)))
+
+    return np.array(res)
+
+
 def cluster_test_data(filename, num_beacon = 60, interval = 10):
     # Data should be numpy array
     # Return dictionary with d['i'] = [beacon_1_avg_rssi, ..., beacon_n_avg_rssi], i represents state_i
 
     data = convert_test_data(filename)
     num_rows = data.shape[0]
-    global max_time
     max_time = data[num_rows-1][0]
 
     num_cluster = int(max_time / interval)
@@ -160,7 +170,7 @@ def cluster_test_data(filename, num_beacon = 60, interval = 10):
         cluster = data[start_index[i]:start_index[i+1]]
         d[i] = process_cluster(cluster)
 
-    return d
+    return d, max_time
 
 def test(state_map, test_rssi, state_loc, index, jud):
     jud = 1 - jud
@@ -222,7 +232,16 @@ def ss_compensator(prev_state, test_file, state_loc, state_map, thred = 2, d = 0
     return pred_state
 
 
-def main():
+def main(freq, intv):
+    # with open("Beacon Log", "a+") as file:
+    #     file.writelines('\n' + str(freq) + ', ' + str(intv) + ': \n')
+
+    train_files = []
+    for i in range(1, 13):
+        train_files.append('horusrssi/' + str(freq) + 'dBm' + str(intv) + 'secRssi' + str(i) + '.txt')
+
+    test_file = 'traceRssi' + str(freq) + 'dB' + str(intv) + 'sec1.txt'
+
     state_loc = get_state_location()
     state_map = train(train_files)
 
@@ -233,9 +252,11 @@ def main():
         for j in range(60):
             if cur[j][0] == -100:
                 jud[j] = 1
+                with open("Beacon Log", "a+") as file:
+                    file.writelines('State '+str(i+1)+ ', loc: (' + str(state_loc[i][0])+ ', ' + str(state_loc[i][1]) + ') Beacon '+str(j) + '\n')
+                #print('State '+str(i+1)+ ', loc: (' + str(state_loc[i][0])+ ', ' + str(state_loc[i][1]) + ') Beacon '+str(j))
 
-    d = cluster_test_data(test_file)
-
+    d, max_time = cluster_test_data(test_file)
     pred_loc = np.zeros((len(d), 2))
 
     for index in d:
@@ -243,8 +264,8 @@ def main():
         pred_loc[index-1][0] = res[0]
         pred_loc[index-1][1] = res[1]
 
-    global max_time
     trueLoc = np.zeros((int(max_time / 10), 2))
+
     for i in range(int(max_time / 10)):
         cur = gtl.findActualLocation(startTime=10*(i), endTime=10*(i+1), stopTime=10, maxTime=max_time)
         trueLoc[i][0], trueLoc[i][1] = cur[0], cur[1]
@@ -252,19 +273,22 @@ def main():
     valid_x = 1 - (trueLoc[:,0] < 4) - (trueLoc[:,0] > 8)
     valid_y = trueLoc[:,1] < 4
     valid_loc = valid_x * valid_y
-
     errors = valid_loc * np.linalg.norm(pred_loc - trueLoc, axis = 1)
     avg_error = np.sum(errors) / np.sum(valid_loc)
 
-    print(avg_error)
+    # with open("Erro Log", "a+") as file:
+    #     file.writelines('Frequency: ' + str(freq) + ', time interval: ' + str(intv) + ', error: ' + str(avg_error) + '\n')
 
-    #errors[errors == 0] = avg_error
-    #plt.plot(np.arange(int(max_time / 10)), abs(errors))
-    #plt.show()
-    #print(pred_loc - trueLoc)
+    #print('Frequency: ' + str(freq) + ', time interval: ' + str(intv) + ', error: ' + str(avg_error) )
 
-    #for i in range(len(trueLoc) - 1):
-    #    print(np.linalg.norm(pred_loc[i] - pred_loc[i+1]))
-    #print(valid_loc)
+freqs = [-12, -15, -20]
+intvs = [0.1, 0.5, 1]
 
-main()
+# for freq in freqs:
+#     for intv in intvs:
+#         main(freq, intv)
+
+
+
+
+

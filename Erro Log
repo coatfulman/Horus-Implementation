@@ -1,0 +1,48 @@
+WITH MEAN:
+
+Not excluding some beacons in training data:
+Frequency: -12, time interval: 0.1, error: 1.7803110036707097
+Frequency: -12, time interval: 0.5, error: 1.8806911623671263
+Frequency: -12, time interval: 1, error: 2.1061522996357374
+Frequency: -15, time interval: 0.1, error: 1.8198159047347957
+Frequency: -15, time interval: 0.5, error: 1.514449215858349
+Frequency: -15, time interval: 1, error: 2.025750489545545
+Frequency: -20, time interval: 0.1, error: 2.0424866566173723
+Frequency: -20, time interval: 0.5, error: 1.65647430336926
+Frequency: -20, time interval: 1, error: 1.536814397139349
+
+Excluding some beacons in training data:
+Frequency: -12, time interval: 0.1, error: 1.8861251967855357
+Frequency: -12, time interval: 0.5, error: 2.3403615362601147
+Frequency: -12, time interval: 1, error: 2.0499140024391957
+Frequency: -15, time interval: 0.1, error: 1.7680003294781803
+Frequency: -15, time interval: 0.5, error: 1.7428438461245648
+Frequency: -15, time interval: 1, error: 2.0917204779401244
+Frequency: -20, time interval: 0.1, error: 1.6814541226119282
+Frequency: -20, time interval: 0.5, error: 1.8473728409169876
+Frequency: -20, time interval: 1, error: 2.1205117323549194
+
+
+WITH MEDIAN:
+
+Not excluding some beacons in training data:
+Frequency: -12, time interval: 0.1, error: 1.8870590263909548
+Frequency: -12, time interval: 0.5, error: 2.1710031588286585
+Frequency: -12, time interval: 1, error: 2.0499141556700606
+Frequency: -15, time interval: 0.1, error: 2.117790464655485
+Frequency: -15, time interval: 0.5, error: 1.9875190054768748
+Frequency: -15, time interval: 1, error: 1.9683747899728945
+Frequency: -20, time interval: 0.1, error: 2.06217944597876
+Frequency: -20, time interval: 0.5, error: 2.0116851286690145
+Frequency: -20, time interval: 1, error: 2.209197590659592
+
+Excluding some beacons in training data:
+Frequency: -12, time interval: 0.1, error: 1.9090848406829444
+Frequency: -12, time interval: 0.5, error: 2.02084451412502
+Frequency: -12, time interval: 1, error: 1.9343728071021444
+Frequency: -15, time interval: 0.1, error: 1.8264928190440723
+Frequency: -15, time interval: 0.5, error: 1.5144747327193782
+Frequency: -15, time interval: 1, error: 2.025750489545545
+Frequency: -20, time interval: 0.1, error: 2.0424866566173723
+Frequency: -20, time interval: 0.5, error: 1.8397409147940884
+Frequency: -20, time interval: 1, error: 1.536814397139349

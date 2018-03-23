@@ -187,7 +187,7 @@ def cluster_test_data(filename, num_beacon = 60, interval = 10):
 
     for i in range(len(start_index) - 1):
         cluster = data[start_index[i]:start_index[i+1]]
-        d[i] = kl_process_cluster(cluster)
+        d[i] = kl_process_cluster(cluster)      #dDLDLDLDLDL
 
     return d, max_time
 
@@ -233,8 +233,12 @@ def test_dl(state_map, test_rssi, state_loc, index, jud):
     test_rssi[:,1][test_rssi[:,1] < 1] = 10
 
     for i in range(state_map.shape[0]):
-        map_mu, map_sigma = state_map[i][:, 0], state_map[i][:, 1]
-        test_mu, test_sigma = test_rssi[:,0], test_rssi[:,1]
+        #map_mu, map_sigma = state_map[i][:, 0], state_map[i][:, 1]
+        #test_mu, test_sigma = test_rssi[:,0], test_rssi[:,1]
+
+        map_mu, map_sigma = test_rssi[:,0], test_rssi[:,1]
+        test_mu, test_sigma = state_map[i][:, 0], state_map[i][:, 1]
+
         cur_dist = np.sum(arg_zero * (np.log(map_sigma / test_sigma) - 1/2)) + \
                    np.sum(arg_zero * (test_sigma ** 2 + (test_mu - map_mu) ** 2)/(2 * map_sigma ** 2))
         kl_dist.append(cur_dist)
@@ -290,20 +294,28 @@ def main(freq, intv):
 
     jud = np.zeros(60)
 
+    if freq == -12 and intv == 1:
+        iter = np.array([4, 18, 21, 50, 59, 46, 11, 28, 22, 39 ])
+        jud[iter] = 1
+
+    if freq == -15 and intv == 0.1:
+        iter = np.array([44, 36, 38, 53])
+        jud[iter] = 1
+
     for i in range(12):
         cur = state_map[i]
         for j in range(60):
             if cur[j][0] == -100:
                 jud[j] = 1
-                with open("Beacon Log", "a+") as file:
-                    file.writelines('State '+str(i+1)+ ', loc: (' + str(state_loc[i][0])+ ', ' + str(state_loc[i][1]) + ') Beacon '+str(j) + '\n')
-                #print('State '+str(i+1)+ ', loc: (' + str(state_loc[i][0])+ ', ' + str(state_loc[i][1]) + ') Beacon '+str(j))
+                # with open("Beacon Log", "a+") as file:
+                #     file.writelines('State '+str(i+1)+ ', loc: (' + str(state_loc[i][0])+ ', ' + str(state_loc[i][1]) + ') Beacon '+str(j) + '\n')
+                # print('State '+str(i+1)+ ', loc: (' + str(state_loc[i][0])+ ', ' + str(state_loc[i][1]) + ') Beacon '+str(j))
 
     d, max_time = cluster_test_data(test_file)
     pred_loc = np.zeros((len(d), 2))
 
     for index in d:
-        res = test_dl(state_map, d[index], state_loc, index, jud)
+        res = test_dl(state_map, d[index], state_loc, index, jud)       # DLDLDLDLDLDL
         pred_loc[index-1][0] = res[0]
         pred_loc[index-1][1] = res[1]
 
@@ -319,10 +331,10 @@ def main(freq, intv):
     errors = valid_loc * np.linalg.norm(pred_loc - trueLoc, axis = 1)
     avg_error = np.sum(errors) / np.sum(valid_loc)
 
-    with open("Erro Log", "a+") as file:
-        file.writelines('Frequency: ' + str(freq) + ', time interval: ' + str(intv) + ', error: ' + str(avg_error) + '\n')
+    # with open("Erro Log", "a+") as file:
+    #     file.writelines('Frequency: ' + str(freq) + ', time interval: ' + str(intv) + ', error: ' + str(avg_error) + '\n')
 
-    #print('Frequency: ' + str(freq) + ', time interval: ' + str(intv) + ', error: ' + str(avg_error) )
+    print('Frequency: ' + str(freq) + ', time interval: ' + str(intv) + ', error: ' + str(avg_error) )
 
 freqs = [-12, -15, -20]
 intvs = [0.1, 0.5, 1]

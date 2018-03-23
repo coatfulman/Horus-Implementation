@@ -148,6 +148,25 @@ def median_process_cluster(cluster, num_beacon = 60):
 
     return np.array(res)
 
+def kl_process_cluster(cluster, num_beacon = 60):
+    bs = np.empty(num_beacon, dtype=object)
+
+    for i in range(num_beacon):
+        bs[i] = []
+    arg = np.argsort(cluster[:, 1])
+    cluster = cluster[arg]
+
+    for i in range(len(cluster)):
+        bs[int(cluster[i][1]) - 1].append(cluster[i][2])
+
+    res = []
+    for arr in bs:
+        if arr == []:
+            res.append((0,0))
+        else:
+            res.append((np.mean(np.array(arr)), np.sqrt(np.var(np.array(arr)))))
+
+    return np.array(res)
 
 def cluster_test_data(filename, num_beacon = 60, interval = 10):
     # Data should be numpy array
@@ -168,7 +187,7 @@ def cluster_test_data(filename, num_beacon = 60, interval = 10):
 
     for i in range(len(start_index) - 1):
         cluster = data[start_index[i]:start_index[i+1]]
-        d[i] = process_cluster(cluster)
+        d[i] = kl_process_cluster(cluster)
 
     return d, max_time
 
@@ -204,6 +223,30 @@ def test(state_map, test_rssi, state_loc, index, jud):
     res = np.sum(norm_probs * state_loc, axis = 0)
 
     return res
+
+def test_dl(state_map, test_rssi, state_loc, index, jud):
+    # KL(p, q), p is test_rssi
+
+    jud = 1 - jud
+    kl_dist = []
+    arg_zero = (abs(test_rssi[:,0]) > 1.0) * jud * (abs(test_rssi[:,1]) > 1.0)
+    test_rssi[:,1][test_rssi[:,1] < 1] = 10
+
+    for i in range(state_map.shape[0]):
+        map_mu, map_sigma = state_map[i][:, 0], state_map[i][:, 1]
+        test_mu, test_sigma = test_rssi[:,0], test_rssi[:,1]
+        cur_dist = np.sum(arg_zero * (np.log(map_sigma / test_sigma) - 1/2)) + \
+                   np.sum(arg_zero * (test_sigma ** 2 + (test_mu - map_mu) ** 2)/(2 * map_sigma ** 2))
+        kl_dist.append(cur_dist)
+
+    probs = np.zeros(state_loc.shape[0])
+    iter = np.arange(state_loc.shape[0])
+    kl_dist = np.array(kl_dist)
+
+    probs[iter] = 1 / np.sum(np.exp(kl_dist[iter] - kl_dist))
+    probs = probs.reshape(state_map.shape[0], 1)
+
+    return np.sum(probs * state_loc, axis = 0)
 
 
 def ss_compensator(prev_state, test_file, state_loc, state_map, thred = 2, d = 0.05, N = 6):
@@ -260,7 +303,7 @@ def main(freq, intv):
     pred_loc = np.zeros((len(d), 2))
 
     for index in d:
-        res = test(state_map, d[index], state_loc, index, jud)
+        res = test_dl(state_map, d[index], state_loc, index, jud)
         pred_loc[index-1][0] = res[0]
         pred_loc[index-1][1] = res[1]
 
@@ -276,19 +319,17 @@ def main(freq, intv):
     errors = valid_loc * np.linalg.norm(pred_loc - trueLoc, axis = 1)
     avg_error = np.sum(errors) / np.sum(valid_loc)
 
-    # with open("Erro Log", "a+") as file:
-    #     file.writelines('Frequency: ' + str(freq) + ', time interval: ' + str(intv) + ', error: ' + str(avg_error) + '\n')
+    with open("Erro Log", "a+") as file:
+        file.writelines('Frequency: ' + str(freq) + ', time interval: ' + str(intv) + ', error: ' + str(avg_error) + '\n')
 
     #print('Frequency: ' + str(freq) + ', time interval: ' + str(intv) + ', error: ' + str(avg_error) )
 
 freqs = [-12, -15, -20]
 intvs = [0.1, 0.5, 1]
 
-# for freq in freqs:
-#     for intv in intvs:
-#         main(freq, intv)
-
-
+for freq in freqs:
+    for intv in intvs:
+        main(freq, intv)
 
 
 

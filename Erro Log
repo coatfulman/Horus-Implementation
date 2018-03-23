@@ -46,3 +46,14 @@ Frequency: -15, time interval: 1, error: 2.025750489545545
 Frequency: -20, time interval: 0.1, error: 2.0424866566173723
 Frequency: -20, time interval: 0.5, error: 1.8397409147940884
 Frequency: -20, time interval: 1, error: 1.536814397139349
+
+WITH KL-DIVERGENCE and excluding lost data and zeros sigma:
+Frequency: -12, time interval: 0.1, error: 1.8599317487177376
+Frequency: -12, time interval: 0.5, error: 1.7591753950385496
+Frequency: -12, time interval: 1, error: 1.9954080322251968
+Frequency: -15, time interval: 0.1, error: 1.908196994230384
+Frequency: -15, time interval: 0.5, error: 1.7064931925533686
+Frequency: -15, time interval: 1, error: 1.7449303690006108
+Frequency: -20, time interval: 0.1, error: 1.8125646869377214
+Frequency: -20, time interval: 0.5, error: 1.7403039483427005
+Frequency: -20, time interval: 1, error: 1.8496344007993384

@@ -1,5 +1,7 @@
 # Horus-Implementation
 
+Implementation of https://dl.acm.org/citation.cfm?id=1067193
+
 Please see two jupyter notebook files.
 
 KL method:

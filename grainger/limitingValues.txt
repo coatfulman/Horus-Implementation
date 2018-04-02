@@ -1,0 +1,3 @@
+lowX - 1.0
+highX - 12.0
+highY - 5.0

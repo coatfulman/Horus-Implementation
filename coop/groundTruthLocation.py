@@ -1,3 +1,6 @@
+import numpy as np
+import pandas as pd
+
 def check(lowY, highY, posY):
     if posY >= lowY and posY<=highY:
         diff1 = posY - lowY
@@ -9,10 +12,10 @@ def check(lowY, highY, posY):
     return posY
 
 def findActualLocation(startTime , endTime, stopTime, maxTime):
-    #### startTime is the starting time of current time window. 
+    #### startTime is the starting time of current time window.
     #### endTime is the end time of current time window
     #### stopTime is a constant. Take it to be 10 seconds
-    #### maxTime is maximum time observed in current movement trace i.e. basically last occuring timestamp value in current file. 
+    #### maxTime is maximum time observed in current movement trace i.e. basically last occuring timestamp value in current file.
     personLocation = pd.read_table('person_location1.txt', delimiter="\t")
     personLocation.columns = ['x', 'y']
     personLocation['x'] = personLocation['x'] + 40
@@ -29,7 +32,7 @@ def findActualLocation(startTime , endTime, stopTime, maxTime):
         Y = row['y']
     # movingSpeed = distance/time
     movingSpeed = 0.7
-    
+
     locationAtTime = endTime
     time = 0
     for index, row in personLocation.iterrows():

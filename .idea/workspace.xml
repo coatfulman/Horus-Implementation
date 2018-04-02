@@ -3,6 +3,133 @@
   <component name="ChangeListManager">
     <list default="true" id="2477d011-1506-45f2-9060-14f126790b10" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Horus-KL.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Horus-Mean.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ceil/Beacon Log" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ceil/Erro Log" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ceil/person_location.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ceil/standingLocation.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ceil/traceRssi-12dB0.1sec1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ceil/traceRssi-12dB0.5sec1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ceil/traceRssi-12dB1sec1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ceil/traceRssi-15dB0.1sec1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ceil/traceRssi-15dB0.5sec1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ceil/traceRssi-15dB1sec1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ceil/traceRssi-20dB0.1sec1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ceil/traceRssi-20dB0.5sec1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ceil/traceRssi-20dB1sec1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coop/groundTruthLocation.py" afterPath="$PROJECT_DIR$/coop/groundTruthLocation.py" />
+      <change beforePath="$PROJECT_DIR$/grainger/groundTruthLocation.py" afterPath="$PROJECT_DIR$/grainger/groundTruthLocation.py" />
+      <change beforePath="$PROJECT_DIR$/groundTruthLocation.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horus.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm0.1secRssi1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm0.1secRssi10.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm0.1secRssi11.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm0.1secRssi12.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm0.1secRssi2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm0.1secRssi3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm0.1secRssi4.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm0.1secRssi5.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm0.1secRssi6.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm0.1secRssi7.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm0.1secRssi8.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm0.1secRssi9.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm0.5secRssi1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm0.5secRssi10.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm0.5secRssi11.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm0.5secRssi12.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm0.5secRssi2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm0.5secRssi3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm0.5secRssi4.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm0.5secRssi5.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm0.5secRssi6.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm0.5secRssi7.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm0.5secRssi8.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm0.5secRssi9.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm1secRssi1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm1secRssi10.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm1secRssi11.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm1secRssi12.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm1secRssi2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm1secRssi3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm1secRssi4.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm1secRssi5.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm1secRssi6.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm1secRssi7.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm1secRssi8.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-12dBm1secRssi9.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm0.1secRssi1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm0.1secRssi10.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm0.1secRssi11.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm0.1secRssi12.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm0.1secRssi2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm0.1secRssi3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm0.1secRssi4.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm0.1secRssi5.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm0.1secRssi6.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm0.1secRssi7.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm0.1secRssi8.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm0.1secRssi9.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm0.5secRssi1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm0.5secRssi10.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm0.5secRssi11.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm0.5secRssi12.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm0.5secRssi2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm0.5secRssi3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm0.5secRssi4.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm0.5secRssi5.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm0.5secRssi6.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm0.5secRssi7.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm0.5secRssi8.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm0.5secRssi9.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm1secRssi1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm1secRssi10.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm1secRssi11.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm1secRssi12.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm1secRssi2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm1secRssi3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm1secRssi4.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm1secRssi5.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm1secRssi6.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm1secRssi7.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm1secRssi8.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-15dBm1secRssi9.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm0.1secRssi1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm0.1secRssi10.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm0.1secRssi11.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm0.1secRssi12.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm0.1secRssi2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm0.1secRssi3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm0.1secRssi4.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm0.1secRssi5.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm0.1secRssi6.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm0.1secRssi7.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm0.1secRssi8.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm0.1secRssi9.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm0.5secRssi1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm0.5secRssi10.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm0.5secRssi11.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm0.5secRssi12.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm0.5secRssi2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm0.5secRssi3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm0.5secRssi4.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm0.5secRssi5.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm0.5secRssi6.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm0.5secRssi7.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm0.5secRssi8.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm0.5secRssi9.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm1secRssi1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm1secRssi10.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm1secRssi11.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm1secRssi12.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm1secRssi2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm1secRssi3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm1secRssi4.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm1secRssi5.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm1secRssi6.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm1secRssi7.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm1secRssi8.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/horusrssi/-20dBm1secRssi9.txt" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,53 +140,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="horus.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/horus.py">
+      <file leaf-file-name="-12dBm0.1secRssi8.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grainger/horusrssi/-12dBm0.1secRssi8.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Horus-Mean.ipynb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grainger/Horus-Mean.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
+            <state>
+              <selected id="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="groundTruthLocation.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grainger/groundTruthLocation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#0#19#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Erro Log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Erro Log">
+      <file leaf-file-name="-12dBm0.1secRssi12.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grainger/horusrssi/-12dBm0.1secRssi12.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="23" lean-forward="false" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Beacon Log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Beacon Log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15135">
-              <caret line="1009" column="51" lean-forward="false" selection-start-line="1009" selection-start-column="51" selection-end-line="1009" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="person_location.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/person_location.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="standingLocation.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/standingLocation.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -83,7 +199,9 @@
       <list>
         <option value="$PROJECT_DIR$/Beacon Log" />
         <option value="$PROJECT_DIR$/Erro Log" />
+        <option value="$PROJECT_DIR$/grainger/groundTruthLocation.py" />
         <option value="$PROJECT_DIR$/horus.py" />
+        <option value="$PROJECT_DIR$/grainger/horus.py" />
       </list>
     </option>
   </component>
@@ -122,6 +240,11 @@
             <path>
               <item name="Horus-Implementation" type="b2602c69:ProjectViewProjectNode" />
               <item name="Horus-Implementation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Horus-Implementation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Horus-Implementation" type="462c0819:PsiDirectoryNode" />
+              <item name="grainger" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -187,18 +310,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15506716" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="0" width="370" height="850" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15506716" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="0" width="370" height="850" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18116684" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08290686" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18116684" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21289662" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16910867" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -222,32 +346,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/horus.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Beacon Log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15135">
-          <caret line="1009" column="51" lean-forward="false" selection-start-line="1009" selection-start-column="51" selection-end-line="1009" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Erro Log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="23" lean-forward="false" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/person_location.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -268,93 +366,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Erro Log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="23" lean-forward="false" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Beacon Log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15135">
-          <caret line="1009" column="51" lean-forward="false" selection-start-line="1009" selection-start-column="51" selection-end-line="1009" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/person_location.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/standingLocation.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/horus.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Erro Log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="39" lean-forward="false" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Beacon Log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15135">
-          <caret line="1009" column="51" lean-forward="true" selection-start-line="1009" selection-start-column="51" selection-end-line="1009" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/person_location.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/standingLocation.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/horus.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -394,9 +406,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -436,9 +446,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -462,9 +470,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -488,9 +494,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -514,9 +518,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -524,9 +526,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -550,9 +550,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2780">
           <caret line="6" column="10" lean-forward="false" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -560,9 +558,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -586,9 +582,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -596,9 +590,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -634,13 +626,132 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/grainger/graingerErrorHorus_trip0.1-12">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grainger/traceRssi-12dB0.5sec1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-817">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grainger/horusrssi/-12dBm0.1secRssi5.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grainger/horusrssi/-12dBm0.1secRssi6.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grainger/horusrssi/-12dBm0.1secRssi12.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grainger/graingerErrorHorus_trip0.1-20">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/horus.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+        <state relative-caret-position="307">
+          <caret line="325" column="53" lean-forward="false" selection-start-line="325" selection-start-column="53" selection-end-line="325" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grainger/horus.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="340" column="67" lean-forward="true" selection-start-line="335" selection-start-column="3" selection-end-line="340" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grainger/graingerErrorHorus_trip0.5-12">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grainger/graingerErrorHorus_trip0.1-15">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grainger/graingerErrorHorus_trip0.5-20">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grainger/graingerErrorHorus_trip1-15">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grainger/graingerErrorHorus_trip1-20">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grainger/horusrssi/-12dBm0.1secRssi8.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grainger/groundTruthLocation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grainger/Horus-Mean.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
         </state>
       </provider>
     </entry>
